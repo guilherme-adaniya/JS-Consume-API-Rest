@@ -5,10 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>API Rest Biblioteca</title>
     <link href="style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
-
-  <body>
+  <!-- onload="getLivros();" onsubmit="return addLivro();"-->
+  <body >
     <div id="app"></div>
+    <form >
+      Titulo:<input type="text" id="titulo" name="titulo"/>
+      Autor:<input type="text" id="autor" name="autor"/>
+      Gênero:<select id="genero">
+        <option>Selecione o Genero</option>
+      </select>
+      <input type="button" value="Add" onclick="addLivro();"/>
+    </form>
     <script src="scripts.js"></script>
   </body>
 </html>
