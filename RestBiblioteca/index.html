@@ -6,10 +6,9 @@
     <title>API Rest Biblioteca</title>
     <link href="style.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <!-- onload="getLivros();" onsubmit="return addLivro();"-->
-  <body >
+  <body onload="init();">
     <div id="app"></div>
     <form >
       Titulo:<input type="text" id="titulo" name="titulo"/>
@@ -17,8 +16,24 @@
       Gênero:<select id="genero">
         <option>Selecione o Genero</option>
       </select>
-      <input type="button" value="Add" onclick="addLivro();"/>
+      <input id="myBtn" type="button" value="Add" onclick="addLivro();"/>
     </form>
+    <div id="myModal" class="modal">
+      
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="formAtt">
+          Titulo:<input type="text" id="tituloAtt" name="titulo"/>
+          Autor:<input type="text" id="autorAtt" name="autor"/>
+          Gênero:<select id="generoAtt">
+            <option>Selecione o Genero</option>
+          </select>
+          <!-- <input id="myBtn"type="button" value="Atualizar"/> -->
+        </form>
+        <!-- <p>Livro Atualizado com Sucesso!</p> -->
+      </div>
+    
+    </div>
     <script src="scripts.js"></script>
   </body>
 </html>
