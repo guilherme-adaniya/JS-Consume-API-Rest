@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   </head>
 
+
   <body onload="init();">
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="index.html">
         <i class="fas fa-book"></i>
         Biblioteca
       </a>
-      <a class="navbar-brand" href="livros.html">
+      <a class="navbar-brand" href="#">
         <i class="fas fa-book"></i>
         Livros
       </a>
@@ -35,9 +36,44 @@
       </a>
     </nav>
 
-    <h1>INDEX</h1>
+    <h1>Livros</h1>
 
-    <script src="autoresJS.js"></script>
+    <div>
+      <button onclick="modalAddShow();">Adicionar Livro</button>
+    </div>
+    <div id="app"></div>
+
+    <!-- Modal Add Livros -->
+    <div id="modalAddLivros" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form >
+          Titulo:<input type="text" id="titulo" name="titulo"/>
+          Autor:<input type="text" id="autor" name="autor"/>
+          Gênero:<select id="genero">
+            <option>Selecione o Genero</option>
+          </select>
+          <input id="myBtn" type="button" value="Add" onclick="addLivro();"/>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal Att Livros -->
+    <div id="modalAttLivros" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="formAtt">
+          Titulo:<input type="text" id="tituloAtt" name="titulo"/>
+          Autor:<input type="text" id="autorAtt" name="autor"/>
+          Gênero:<select id="generoAtt">
+            <option>Selecione o Genero</option>
+          </select>
+        </form>
+      </div>
+    </div>
+
+
+    <script src="livrosJS.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
