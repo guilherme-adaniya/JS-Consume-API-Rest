@@ -36,6 +36,59 @@
       </a>
     </nav>
     <h1>Emprestimos</h1>
+    <body onload="init();">
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-book"></i>
+          Biblioteca
+        </a>
+        <a class="navbar-brand" href="livros.html">
+          <i class="fas fa-book"></i>
+          Livros
+        </a>
+        <a class="navbar-brand" href="autores.html">
+          <i class="fas fa-book"></i>
+          Autores
+        </a>
+        <a class="navbar-brand" href="emprestimos.html">
+          <i class="fas fa-book"></i>
+          Emprestimos
+        </a>
+        <a class="navbar-brand" href="usuarios.html">
+          <i class="fas fa-book"></i>
+          Usuarios
+        </a>
+      </nav>
+      <h1>Usuarios</h1>
+      <div>
+        <button onclick="modalAddShow();">Cadastrar Emprestimo</button>
+      </div>
+      <div id="app"></div>
+  
+      <!-- Modal Add Usuarios -->
+      <div id="modalAddEmprestimo" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form >
+            Nome:<input type="text" id="nome" name="nome"/>
+            E-mail:<input type="text" id="email" name="email"/>
+            Senha:<input type="text" id="senha" name="senha"/>
+            Matricula:<input type="text" id="matricula" name="matricula"/>
+            <input id="myBtn" type="button" value="Add" onclick="addUsuario();"/>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Modal Att Usuario -->
+      <div id="modalAttUsuario" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form id="formAtt">
+            Nome:<input type="text" id="nomeAtt" name="nome"/>
+            E-mail:<input type="text" id="emailAtt" name="email"/>
+          </form>
+        </div>
+      </div>
 
     <script src="emprestimosJS.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
